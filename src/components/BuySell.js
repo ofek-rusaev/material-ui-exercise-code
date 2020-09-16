@@ -17,22 +17,24 @@ const useStyles = makeStyles((theme) => ({
     grid: {
         marginTop: 1,
         marginBottom: 15,
-        backgroundColor: '#272E38',
-        color: '#cdd3d8',
-        height: '22vh'
+        height: '45%',
+        backgroundColor: theme.palette.primary.dark,
+        color: '#cdd3d8'
     },
     gridHeader: {
-        backgroundColor: '#2F3B4B',
-        marginBottom: '-20px',
+        backgroundColor: theme.palette.primary.main,
         paddingLeft: 10,
-        minHeight: '50px'
     },
     gridMain: {
-        backgroundColor: '#272E38',
+        backgroundColor: theme.palette.primary.dark,
         paddingLeft: 10,
+        textAlign: 'center',
+        maxWidth: '90%'
+
     },
     flex: {
-        display: 'flex'
+        display: 'flex',
+        justifyContent: 'space-between'
     },
     sell: {
         backgroundColor: '#e81b37',
@@ -58,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center'
     },
     tag: {
-        backgroundColor: '#272E38',
+        backgroundColor: theme.palette.primary.dark,
         border: '1px solid #2F3B4B',
         margin: 1,
         minWidth: '100px'

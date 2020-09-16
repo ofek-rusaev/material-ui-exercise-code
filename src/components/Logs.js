@@ -44,17 +44,30 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         color: '#cdd3d8',
         fontSize: '10px',
-        backgroundColor: '#2F3B4B',
-        // marginBottom: '-20px',
-        // paddingLeft: 10,
+        backgroundColor: theme.palette.primary.main,
         maxHeight: '20px'
     },
-    root: {
+    tabs: {
         width: '100%',
         fontSize: '10px',
-        backgroundColor: '#272E38',
+        backgroundColor: theme.palette.primary.dark,
         color: '#cdd3d8',
     },
+    tab: {
+        color: 'white',
+        '&$selected': {
+            backgroundColor: '#004C9B',
+            color: 'white',
+            fontWeight: theme.typography.fontWeightMedium,
+        },
+    },
+    indicator: {
+        backgroundColor: '#a4a5a7',
+        top: '45px',
+    },
+    logs: {
+        padding: 0
+    }
 }));
 
 const rows = [];
@@ -77,11 +90,27 @@ getRows();
 function renderRow(props) {
     const { index, style } = props;
     const data = rows[index];
+    const strStart = `[${data.date}] ${data.env}. `;
+    const strEnd = ` ${data.message}. `;
+    let statusColor = colorUpdate(data.status);
+
     return (
         <ListItem button style={style} key={index}>
-            <ListItemText primary={`[${data.date}] ${data.env}. ${data.status.toUpperCase()}: ${data.message}`} />
+            <ListItemText primary={<React.Fragment>{strStart} <span style={{ color: statusColor }}>{data.status.toUpperCase()}</span>{strEnd}</React.Fragment>} />
         </ListItem>
     );
+}
+
+function colorUpdate(status) {
+    switch (status) {
+        case 'Info':
+            return 'yellow'
+        case 'Debug':
+            return 'red'
+        default:
+            break;
+    }
+
 }
 renderRow.propTypes = {
     index: PropTypes.number.isRequired,
@@ -105,6 +134,9 @@ export default function Logs() {
         <div >
             <AppBar position="static">
                 <Tabs
+                    classes={{
+                        indicator: classes.indicator
+                    }}
                     className={classes.header}
                     value={value}
                     onChange={handleChange}
@@ -129,23 +161,80 @@ export default function Logs() {
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
                 index={value}
                 onChangeIndex={handleChangeIndex}
+                className={classes.logs}
             >
                 <TabPanel value={value} index={0} dir={theme.direction}>
-                    <div className={classes.root}>
+                    <div className={classes.tabs}>
                         <FixedSizeList height={400} itemSize={26} itemCount={rows.length}>
                             {renderRow}
                         </FixedSizeList>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={1} dir={theme.direction}>
-                    <div className={classes.root}>
+                    <div className={classes.tabs}>
                         <FixedSizeList height={400} itemSize={26} itemCount={rows.length}>
                             {renderRow}
                         </FixedSizeList>
                     </div>
                 </TabPanel>
                 <TabPanel value={value} index={2} dir={theme.direction}>
-                    <div className={classes.root}>
+                    <div className={classes.tabs}>
+                        <FixedSizeList height={400} itemSize={26} itemCount={rows.length}>
+                            {renderRow}
+                        </FixedSizeList>
+                    </div>
+                </TabPanel>
+                <TabPanel value={value} index={3} dir={theme.direction}>
+                    <div className={classes.tabs}>
+                        <FixedSizeList height={400} itemSize={26} itemCount={rows.length}>
+                            {renderRow}
+                        </FixedSizeList>
+                    </div>
+                </TabPanel>
+                <TabPanel value={value} index={4} dir={theme.direction}>
+                    <div className={classes.tabs}>
+                        <FixedSizeList height={400} itemSize={26} itemCount={rows.length}>
+                            {renderRow}
+                        </FixedSizeList>
+                    </div>
+                </TabPanel>
+                <TabPanel value={value} index={5} dir={theme.direction}>
+                    <div className={classes.tabs}>
+                        <FixedSizeList height={400} itemSize={26} itemCount={rows.length}>
+                            {renderRow}
+                        </FixedSizeList>
+                    </div>
+                </TabPanel>
+                <TabPanel value={value} index={6} dir={theme.direction}>
+                    <div className={classes.tabs}>
+                        <FixedSizeList height={400} itemSize={26} itemCount={rows.length}>
+                            {renderRow}
+                        </FixedSizeList>
+                    </div>
+                </TabPanel>
+                <TabPanel value={value} index={7} dir={theme.direction}>
+                    <div className={classes.tabs}>
+                        <FixedSizeList height={400} itemSize={26} itemCount={rows.length}>
+                            {renderRow}
+                        </FixedSizeList>
+                    </div>
+                </TabPanel>
+                <TabPanel value={value} index={8} dir={theme.direction}>
+                    <div className={classes.tabs}>
+                        <FixedSizeList height={400} itemSize={26} itemCount={rows.length}>
+                            {renderRow}
+                        </FixedSizeList>
+                    </div>
+                </TabPanel>
+                <TabPanel value={value} index={9} dir={theme.direction}>
+                    <div className={classes.tabs}>
+                        <FixedSizeList height={400} itemSize={26} itemCount={rows.length}>
+                            {renderRow}
+                        </FixedSizeList>
+                    </div>
+                </TabPanel>
+                <TabPanel value={value} index={10} dir={theme.direction}>
+                    <div className={classes.tabs}>
                         <FixedSizeList height={400} itemSize={26} itemCount={rows.length}>
                             {renderRow}
                         </FixedSizeList>

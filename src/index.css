@@ -41,5 +41,9 @@ code {
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #252C36;
+  background: #252C36 !important;
+}
+
+.MuiBox-root-57, .MuiBox-root-56 {
+  padding: 0 !important;
 }

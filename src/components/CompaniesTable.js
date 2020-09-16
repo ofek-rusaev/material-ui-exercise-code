@@ -1,7 +1,7 @@
 import React from 'react';
 
 // @material-ui/core components
-import { Table, TableHead, TableRow, TableBody, TableCell, TableContainer } from "@material-ui/core";
+import { Table, TableHead, TableRow, TableBody, TableCell, TableContainer, Button } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 
@@ -19,11 +19,11 @@ const useStyles = makeStyles((theme) => ({
         minWidth: 480,
     },
     tableHead: {
-        backgroundColor: '#2F3B4B',
+        backgroundColor: theme.palette.primary.main,
 
     },
     tableBody: {
-        backgroundColor: '#252C36',
+        backgroundColor: theme.palette.primary.dark,
     },
     tableCell: {
         fontSize: '10px',
@@ -34,8 +34,22 @@ const useStyles = makeStyles((theme) => ({
     },
     canceled: {
         color: '#e81b37'
+    },
+    dateCell: {
+        color: '#a4a5a7',
+        fontSize: '10px',
+    },
+    filter: {
+        color: '#a4a5a7',
+        fontSize: '10px',
+        backgroundColor: 'inherit',
+        marginLeft: '5px',
+        border: '1px solid #a4a5a7',
+        maxHeight: '18px',
+    },
+    filterRemove: {
+        marginLeft: '10px'
     }
-
 }));
 
 const rows = [];
@@ -57,11 +71,21 @@ getRows();
 
 export default function DenseTable() {
     const classes = useStyles();
+    const filters = ['Filter 1', 'Filter 2', 'Filter 3'];
+
     return (
         <TableContainer component={Paper}>
             <Table className={classes.table} size="small" aria-label="a dense table">
                 <TableHead className={classes.tableHead}>
-                    <TableRow><TableCell colSpan={4} className={classes.tableCell}>FILTER APPLIED:</TableCell></TableRow>
+                    <TableRow><TableCell colSpan={4} className={classes.tableCell}>FILTER APPLIED:
+                        {filters.map(filter => {
+                        return <Button key={filter} size="small" variant="contained" className={classes.filter}>
+                            {filter}
+                            <span className={classes.filterRemove}>x</span>
+                        </Button>
+                    })}
+                    </TableCell>
+                    </TableRow>
                     <TableRow>
                         <TableCell className={classes.tableCell}>COMPANY NAME</TableCell>
                         <TableCell className={classes.tableCell}>PRODUCT</TableCell>
@@ -74,7 +98,7 @@ export default function DenseTable() {
                         <TableRow key={row.company}>
                             <TableCell className={classes.tableCell}>{row.company}</TableCell>
                             <TableCell className={classes.tableCell}>{row.product}</TableCell>
-                            <TableCell className={classes.tableCell}>{row.sentAt}</TableCell>
+                            <TableCell className={classes.dateCell}>{row.sentAt}</TableCell>
                             <TableCell color={(row.status) ? 'green' : 'red'} className={classes.tableCell}>
                                 {(row.status) ? <span className={classes.active}> {circleIcon} Active</span> : <span className={classes.canceled}> {circleIcon} Canceled</span>}
                             </TableCell>

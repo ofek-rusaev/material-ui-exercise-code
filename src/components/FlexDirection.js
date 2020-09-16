@@ -4,13 +4,18 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
     tags: {
-        backgroundColor: '#272E38',
+        backgroundColor: theme.palette.primary.dark,
         margin: 1,
         maxHeight: '40px'
     },
     tag: {
         border: '1px solid #2F3B4B',
         padding: 2,
+        flex: 1
+    },
+    box: {
+        margin: 0,
+        padding: 0,
     }
 
 }));
@@ -22,7 +27,7 @@ export default function FlexDirection(props) {
 
     return (
         <div style={{ width: '100%' }} className={classes.tags}>
-            <Box display="flex" justifyContent="center" alignContent="space-between" flexDirection="row" p={1} m={1}>
+            <Box className={classes.box} display="flex" justifyContent="space-between" flexDirection="row" p={1} m={1}>
                 <Box p={1} className={classes.tag}>
                     {tag1}
                 </Box>

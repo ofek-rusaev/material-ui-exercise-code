@@ -14,16 +14,20 @@ const useStyles = makeStyles((theme) => ({
         overflow: 'hidden'
     },
     tableHead: {
-        backgroundColor: '#2F3B4B',
+        backgroundColor: theme.palette.primary.main,
 
     },
     tableBody: {
-        backgroundColor: '#272E38',
+        backgroundColor: theme.palette.primary.dark,
     },
     tableCell: {
         fontSize: '10px',
         color: '#cdd3d8',
         whiteSpace: 'nowrap'
+    },
+    dateCell: {
+        color: '#a4a5a7',
+        fontSize: '10px',
     }
 }));
 
@@ -74,7 +78,7 @@ export default function DenseTable() {
                             <TableCell className={classes.tableCell}>{row.usd}6</TableCell>
                             <TableCell className={classes.tableCell}>{row.gbp}7</TableCell>
                             <TableCell className={classes.tableCell}>{row.netExposure}8</TableCell>
-                            <TableCell className={classes.tableCell}>{row.lastCalculated}9</TableCell>
+                            <TableCell className={classes.dateCell}>{row.lastCalculated}9</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>

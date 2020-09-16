@@ -6,6 +6,7 @@ import {
     Chart,
     LineSeries,
 } from '@devexpress/dx-react-chart-material-ui';
+
 import { makeStyles } from '@material-ui/core/styles';
 
 const data = [
@@ -25,19 +26,21 @@ const data = [
 
 const useStyles = makeStyles((theme) => ({
     chart: {
-        backgroundColor: '#272E38',
-        maxHeight: '200px',
+        backgroundColor: theme.palette.primary.dark,
+
+        maxHeight: '250px',
         position: 'relative',
         fontSize: '10px',
+        color: '#cdd3d8',
+
     },
     chartInfo: {
-
         color: '#cdd3d8',
     },
     root: {
         width: '100%',
         fontSize: '10px',
-        backgroundColor: '#272E38',
+        backgroundColor: theme.palette.primary.dark,
         color: '#cdd3d8',
     },
 }));
@@ -53,5 +56,4 @@ export default function Graph() {
             </Chart>
         </Paper>
     )
-
 }; 

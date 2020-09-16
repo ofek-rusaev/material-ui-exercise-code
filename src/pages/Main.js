@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     grid: {
         width: '100%',
         margin: '0px',
-        background: '#152235',
+        background: theme.palette.secondary.dark,
 
     },
     gridItem: {
@@ -70,25 +70,25 @@ const Main = () => {
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid item xs={4} className={classes.gridItem}>
+            <Grid item xs={12} md={4} className={classes.gridItem}>
                 <Grid container spacing={1} className={classes.grid}>
-                    <Grid item xs={12} md={6} className={classes.gridItem}>
+                    <Grid item sm={12} sm={6} md={6} className={classes.gridItem}>
                         <Graph />
                     </Grid>
-                    <Grid item xs={12} md={6} className={classes.gridItem}>
+                    <Grid item xs={12} sm={6} md={6} className={classes.gridItem}>
                         <Graph />
                     </Grid>
                 </Grid>
                 <Grid container spacing={1} className={classes.grid}>
-                    <Grid item xs={12} md={6} className={classes.gridItem}>
+                    <Grid item xs={12} sm={6} md={6} className={classes.gridItem}>
                         <Graph />
                     </Grid>
-                    <Grid item xs={12} md={6} className={classes.gridItem}>
+                    <Grid item xs={12} sm={6} md={6} className={classes.gridItem}>
                         <Graph />
                     </Grid>
                 </Grid>
                 <Grid container spacing={1} className={classes.grid}>
-                    <Grid item xs={12} md={6} className={classes.gridItem}>
+                    <Grid item xs={12} sm={6} md={6} className={classes.gridItem}>
                         <Graph />
                     </Grid>
 
