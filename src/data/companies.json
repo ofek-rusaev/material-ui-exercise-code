@@ -1,0 +1,80 @@
+[
+    {
+        "company": "Panovich",
+        "product": "PCN",
+        "sentAt": "30 April 2020 17:09",
+        "status": true
+    },
+    {
+        "company": "Maynard",
+        "product": "ALB",
+        "sentAt": "30 April 2020 17:09",
+        "status": false
+    },
+    {
+        "company": "Mauro",
+        "product": "PLW",
+        "sentAt": "30 April 2020 17:09",
+        "status": false
+    },
+    {
+        "company": "Griffin",
+        "product": "ARM",
+        "sentAt": "30 April 2020 17:09",
+        "status": false
+    },
+    {
+        "company": "Widenmier",
+        "product": "CYM",
+        "sentAt": "30 April 2020 17:09",
+        "status": false
+    },
+    {
+        "company": "Jayanti",
+        "product": "COM",
+        "sentAt": "30 April 2020 17:09",
+        "status": false
+    },
+    {
+        "company": "Knutson",
+        "product": "MKD",
+        "sentAt": "30 April 2020 17:09",
+        "status": false
+    },
+    {
+        "company": "Camiling",
+        "product": "GIN",
+        "sentAt": "30 April 2020 17:09",
+        "status": true
+    },
+    {
+        "company": "Crumbliss",
+        "product": "JOR",
+        "sentAt": "30 April 2020 17:09",
+        "status": true
+    },
+    {
+        "company": "Women",
+        "product": "FRO",
+        "sentAt": "30 April 2020 17:09",
+        "status": true
+    },
+    {
+        "company": "Gram",
+        "product": "COM",
+        "sentAt": "30 April 2020 17:09",
+        "status": false
+    },
+    {
+        "company": "Cowen",
+        "product": "QAT",
+        "sentAt": "30 April 2020 17:09",
+        "status": false
+    },
+    {
+        "company": "Damiano",
+        "product": "NRU",
+        "sentAt": "30 April 2020 17:09",
+        "status": true
+    }
+]

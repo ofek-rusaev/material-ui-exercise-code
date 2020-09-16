@@ -1,0 +1,101 @@
+[
+    {
+        "counterParty": "Mckenzie",
+        "btc": 2.125,
+        "eth": 0,
+        "xpr": 0,
+        "eur": 0,
+        "usd": 11413,
+        "gbp": 0,
+        "netExposure": 1000000.36,
+        "lastCalculated": "01/07/2020"
+    },
+    {
+        "counterParty": "Clanton",
+        "btc": 0,
+        "eth": 0,
+        "xpr": 0,
+        "eur": 0,
+        "usd": 0,
+        "gbp": 0,
+        "netExposure": 0,
+        "lastCalculated": "01/07/2020"
+    },
+    {
+        "counterParty": "Herbert",
+        "btc": 0,
+        "eth": 0,
+        "xpr": 0,
+        "eur": 0,
+        "usd": 0,
+        "gbp": 0,
+        "netExposure": 0,
+        "lastCalculated": "01/07/2020"
+    },
+    {
+        "counterParty": "Alarie",
+        "btc": 0,
+        "eth": 0,
+        "xpr": 0,
+        "eur": 0,
+        "usd": 0,
+        "gbp": 0,
+        "netExposure": 0,
+        "lastCalculated": "01/07/2020"
+    },
+    {
+        "counterParty": "Gardner",
+        "btc": 0,
+        "eth": 0,
+        "xpr": 0,
+        "eur": 0,
+        "usd": 0,
+        "gbp": 0,
+        "netExposure": 0,
+        "lastCalculated": "01/07/2020"
+    },
+    {
+        "counterParty": "Royer",
+        "btc": 0,
+        "eth": 0,
+        "xpr": 0,
+        "eur": 0,
+        "usd": 0,
+        "gbp": 0,
+        "netExposure": 0,
+        "lastCalculated": "01/07/2020"
+    },
+    {
+        "counterParty": "Flanagan",
+        "btc": 0,
+        "eth": 0,
+        "xpr": 0,
+        "eur": 0,
+        "usd": 0,
+        "gbp": 0,
+        "netExposure": 0,
+        "lastCalculated": "01/07/2020"
+    },
+    {
+        "counterParty": "Chatham",
+        "btc": 0,
+        "eth": 0,
+        "xpr": 0,
+        "eur": 0,
+        "usd": 0,
+        "gbp": 0,
+        "netExposure": 0,
+        "lastCalculated": "01/07/2020"
+    },
+    {
+        "counterParty": "Kirshner",
+        "btc": 0,
+        "eth": 0,
+        "xpr": 0,
+        "eur": 0,
+        "usd": 0,
+        "gbp": 0,
+        "netExposure": 0,
+        "lastCalculated": "01/07/2020"
+    }
+]

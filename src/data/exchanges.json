@@ -1,0 +1,20 @@
+[
+    {
+        "currencies": "BTC-USD",
+        "sellPrice": 9565.45,
+        "buyPrice": 9580.52,
+        "rate": 18.5,
+        "tag1": 1.23,
+        "tag2": "MKT",
+        "tag3": "Slippage"
+    },
+    {
+        "currencies": "ETH-USD",
+        "sellPrice": 5665.45,
+        "buyPrice": 5680.52,
+        "rate": 17.5,
+        "tag1": 1.22,
+        "tag2": "MKT",
+        "tag3": "Slippage"
+    }
+]
